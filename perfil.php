@@ -56,19 +56,58 @@
                 
 					$result1=mysqli_query($link,"select nombre,apellidos,correo from alumnos where matricula='$mat'");
 					$row1=mysqli_fetch_array($result1);
-
+                    
 					$matricula=$row1["nombre"];
 					$apellidos=$row1["apellidos"];
                     $correo=$row1["correo"];
 					
-                    echo "<p> $matricula </p>";
+                    echo "<table id='t01'>";
+                        echo "<tr>";
+                            echo "<th>Nombre</th>";
+                            echo "<th>Apellidos</th>";
+                            echo "<th>Correo</th>";
+                        echo "</tr>";
+                        echo "<tr>";
+                            echo "<td> $matricula </td>";
+                            echo "<td> $apellidos </td>";
+                            echo "<td> $correo </td>";
+                        echo "</tr>";
+                    echo "</table>";
+                    
+                    
                 
 	                $result2=mysqli_query($link,"select * from perfil where id_Alumno='$mat'");
-                    $row2=mysqli_fetch_array($result2);
                     
-                    $id_Alumno=$row2["id_Alumno"];
-                    
-                     echo "<p> $id_Alumno </p>";
+                    echo "<table>";
+                    echo "<tr>";
+                    echo "<th> ID Alumno </th>";
+                    echo "<th> ID Tema </th>";
+                    echo "<th> No Respuestas Correctas </th>";
+                    echo "<th> No Respuestas Incorrectas </th>";
+                    echo "<th> Estado </th>";
+                    echo "<th> Fecha Examen </th>";
+                    echo "<th> Intentos </th>";
+                    echo "</tr>";
+                    while($row2 = mysqli_fetch_array($result2)){
+                        $idAlumno=$row2["id_Alumno"];
+					    $idTema=$row2["id_Tema"];
+                        $noCorrectas=$row2["noRespuestasCorrectas"];
+                        $noIncorrectas=$row2["noRespuestasIncorrectas"];
+					    $estado=$row2["estado"];
+                        $fechaExamen=$row2["fecha_Examen"];
+                        $intentos=$row2["intentos"];
+                        echo "<tr>";
+                        echo "<td> $idAlumno </td>";
+                        echo "<td> $idTema </td>";
+                        echo "<td> $noCorrectas </td>";
+                        echo "<td> $noIncorrectas </td>";
+                        echo "<td> $estado </td>";
+                        echo "<td> $fechaExamen </td>";
+                        echo "<td> $intentos </td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                
                     
                 ?>
 		    </div>

@@ -101,6 +101,8 @@ nav ul li:hover{
     font-family: 'Khand', sans-serif;
     color: aliceblue;
     font-size: 30px;
+    position: relative;
+    top: -20px;
 }
 
 table{
@@ -108,6 +110,8 @@ table{
 	text-align: left;
 	border-collapse: collapse;
 	width: 50%;
+	position: relative;
+	top: -20px;
 }
 
 th{
@@ -134,3 +138,21 @@ tr:hover td{
 	color: white;
 }
 
+.boton #enviar{
+	width: 200px;
+	height: 50px;
+	background: #F4D03F;
+	border: 0px solid;
+	font-family: 'Khand', sans-serif;
+	color: white;
+	font-size: 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	position: absolute;
+	top: 580px;
+	left: 0px;
+}
+
+.boton #enviar:hover{
+	background: #138D75;
+}

@@ -115,6 +115,12 @@
                 ?>
 		    </div>
 		</div>
+		
+		<div class="boton">
+			<form action="menu.php" action="post">
+				<input type="submit" id="enviar" name="enviar" value="Regresar al Menu Principal">
+			</form>
+		</div>
 
 	</body>
 </html>

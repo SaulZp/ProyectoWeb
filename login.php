@@ -41,6 +41,7 @@
 	session_start();
 	$matricula = $_POST['matricula'];
 	$contrasena = $_POST['pass'];
+	$contrasena = md5($contrasena);
 	//echo "...".$contrasena;
 	$link = mysqli_connect("localhost","root","");
 	mysqli_select_db($link,"proyecto");

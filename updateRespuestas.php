@@ -40,7 +40,108 @@
 
 		<!--PRESENTACION-->	
 		<div class="respuesta">
-		
+		    <div class="contenedorRespuesta">
+                <p id="titulo2">Listado de Todas las Preguntas</p>
+			    <form action="upRespuesta.php" class="form_pregunta" method="post">
+			        
+			        <label for="pregunta" id="lpregunta">Tema</label>
+			        <input type="text" id="tema" name="tema" placeholder="ID delTema de la Pregunta"/>
+
+			        <label for="pregunta" id="lpregunta">#Pregunta</label>
+			        <input type="text" id="noPregunta" name="noPregunta" placeholder="Numero de pregunta"/>
+			        
+			        <label for="respuesta1" id="lpregunta">Respuesta 1</label>
+			        <input type="text" id="respuesta1" name="respuesta1" placeholder="Respuesta 1"/>
+			        <br>
+			        <label for="respuesta1" id="lpregunta">Respuesta 2</label>
+			        <input type="text" id="respuesta2" name="respuesta2" placeholder="Respuesta 2"/>
+			        
+			        <label for="respuesta1" id="lpregunta">Respuesta 3</label>
+			        <input type="text" id="respuesta3" name="respuesta3" placeholder="Respuesta 3"/>
+			        
+			        <label for="respuesta1" id="lpregunta">Respuesta 4</label>
+			        <input type="text" id="respuesta4" name="respuesta4" placeholder="Respuesta 4"/>
+			        <br>
+			        <label for="respuesta1" id="lpregunta">Solucion</label>
+			        <input type="text" id="solucion" name="solucion" placeholder="Solucion de estas 4 respuestas"/>
+			        <input type="submit" id="submit" value="Enviar Cambios"/>
+			    </form>
+			    <?php
+                    $host = "localhost";
+                    $user = "root";
+                    $pw = "";
+                    $db = "proyecto";
+
+                    $link = mysqli_connect($host,$user,$pw);
+                     mysqli_select_db($link,$db);
+                    
+                    //echo utf8_encode();            
+                
+                    $consultaAlumno = mysqli_query($link,"SELECT * FROM preguntas");
+                    echo "<table>";
+                    echo "<tr>";
+                    echo "<th> ID Tema </th>";
+                    echo "<th> No Pregunta </th>";
+                    echo "<th> Pregunta </th>";
+                    echo "<th> Respuesta 1 </th>";
+                    echo "<th> Respuesta 2 </th>";
+                    echo "<th> Respuesta 3 </th>";
+                    echo "<th> Respuesta 4 </th>";
+                    echo "<th> Solución </th>";
+                    echo "</tr>";
+                    while($fila = mysqli_fetch_array($consultaAlumno)){
+                        
+                        $pregunta = $fila['pregunta'];
+				        $respuesta1 = $fila['respuesta1'];
+				        $respuesta2 = $fila['respuesta2'];
+						$respuesta3 = $fila['respuesta3'];
+						$respuesta4 = $fila['respuesta4'];
+							
+						$tema = $fila['id_Tema'];
+						$numP = $fila['noPregunta'];
+                        $solu = $fila['solucion'];
+
+						//RANGO, NUMERO DE PREGUNTAS CUYA RESPUESTA SON ETIQUETAS HTML, SE HACE LA CONVERSION DE HTML A TEXTO PLANO
+						//SI EL NUMERO DE PREGUNTA NO ES 3,5,7 NO HACE CONVERSION Y SOLO CODIFICA PARA QUE NO SALGAN COSAS RARAS
+						if($tema=='1'){
+				            if(($numP=='3')or($numP=='5')or($numP=='7')){
+								$respuesta1 = htmlentities($respuesta1);
+								$respuesta2 = htmlentities($respuesta2);
+								$respuesta3 = htmlentities($respuesta3);
+								$respuesta4 = htmlentities($respuesta4);
+				            }	
+				        }
+
+				        if($tema=='2'){
+				            if(($numP=='3')or($numP=='4')or($numP=='7')){
+								$respuesta1 = htmlentities($respuesta1);
+								$respuesta2 = htmlentities($respuesta2);
+								$respuesta3 = htmlentities($respuesta3);
+								$respuesta4 = htmlentities($respuesta4);
+				            }	
+				        }
+							
+				        $pregunta= utf8_encode($pregunta);
+						$respuesta1= utf8_encode($respuesta1);
+						$respuesta2= utf8_encode($respuesta2);
+						$respuesta3= utf8_encode($respuesta3);
+						$respuesta4= utf8_encode($respuesta4);
+                        
+                        
+                        echo "<tr>";
+                        echo "<td> $tema </td>";
+                        echo "<td> $numP </td>";
+                        echo "<td> $pregunta </td>";
+                        echo "<td> $respuesta1 </td>";
+                        echo "<td> $respuesta2 </td>";
+                        echo "<td> $respuesta3 </td>";
+                        echo "<td> $respuesta4 </td>";
+                        echo "<td> $solu </td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                ?>
+			</div>
 		</div>
 
 	</body>

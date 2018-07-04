@@ -89,9 +89,12 @@ nav ul li:hover{
 .respuesta{
 	display: block;
 	margin: 0px;
+    padding-top: 40px;
 	background-image: url(../img/updateRespuestas.jpg);
 	background-size: cover;
-	height: 586px;
+	height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .alumnos{
 	display: block;
@@ -164,8 +167,15 @@ tr:nth-child(even) {
     background-color: rgb(0, 0, 0, 0.4);
     height: 460px;
 }
+.contenedorRespuesta{
+    margin: 0;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    height: auto;
+}
 
-#noPregunta, #nPregunta, #submit, #tema{
+#noPregunta, #nPregunta, #submit, #tema, #respuesta1, #respuesta2, #respuesta3, #respuesta4, #solucion{
     padding: 3px;
     border-radius: 6px;
     font-family: 'Khand', sans-serif;
@@ -178,6 +188,6 @@ tr:nth-child(even) {
     color: #FFC300;
     border-color: #252726;
 }
-#noPregunta, #nPregunta, #tema{
+#noPregunta, #nPregunta, #tema, #respuesta1, #respuesta2, #respuesta3, #respuesta4, #solucion{
     width: 280px;
 }

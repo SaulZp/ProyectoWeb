@@ -154,7 +154,7 @@ tr:nth-child(even) {
     height: auto;
 }
 
-#pregunta, #nPregunta, #submit{
+#t, #noPregunta, #nPregunta, #submit{
     padding: 3px;
     border-radius: 6px;
     font-family: 'Khand', sans-serif;
@@ -167,7 +167,7 @@ tr:nth-child(even) {
     color: #FFC300;
     border-color: #252726;
 }
-#pregunta, #nPregunta{
+#t, #noPregunta,#nPregunta{
     width: 300px;
 }
 

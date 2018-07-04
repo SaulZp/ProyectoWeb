@@ -15,10 +15,9 @@
      <body>
          <?php
             //obtiene los valores del formulario generales
-            $pregunta = $_POST['pregunta'];
+            $tema = $_POST['t'];
+            $noPregunta = $_POST['noPregunta'];
             $nPregunta = $_POST['nPregunta'];
-            //echo "$pregunta <br>";
-            //echo "$nPregunta <br>";
             $host = "localhost";
             $user = "root";
             $pw = "";
@@ -28,7 +27,14 @@
             mysqli_select_db($link,$db);
          
             //Update de una pregunta
-            $sql = "UPDATE preguntas SET pregunta='$nPregunta' WHERE pregunta = '$pregunta'";
+           /* $consulta = mysqli_query($link,"SELECT * FROM preguntas WHERE id_Tema='$tema' AND noPregunta='$noPregunta'");            
+            if($row=mysqli_fetch_array($consulta)){
+                $p = $row['pregunta'];
+                echo $p;
+            }*/
+
+            
+            $sql = "UPDATE preguntas SET pregunta='$nPregunta' WHERE id_Tema='$tema' AND noPregunta='$noPregunta'";
             //Script para validar la actualizacion
             if (mysqli_query($link,$sql)) {
                 echo '<script>alert("Informacion agregada correctamente");</script>';

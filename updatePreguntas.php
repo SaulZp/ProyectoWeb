@@ -49,8 +49,13 @@
 			<div class="contenedorPregunta">
                 <p id="titulo2">Listado de Todas las Preguntas</p>
 			    <form action="upPregunta.php" class="form_pregunta" method="post">
-			        <label for="pregunta" id="lpregunta">Pregunta</label>
-			        <input type="text" id="pregunta" name="pregunta" placeholder="Escriba la pregunta a editar"/>
+			        
+			        <label for="pregunta" id="lpregunta">Tema</label>
+			        <input type="text" id="t" name="t" placeholder="Escriba la pregunta a editar"/>
+
+			        <label for="pregunta" id="lpregunta">#Pregunta</label>
+			        <input type="text" id="noPregunta" name="noPregunta" placeholder="Escriba la pregunta a editar"/>
+			        
 			        <label for="nPregunta" id="lpregunta">Nueva Pregunta</label>
 			        <input type="text" id="nPregunta" name="nPregunta" placeholder="Escriba la nueva pregunta"/>
 			        <input type="submit" id="submit" value="Enviar Cambios"/>

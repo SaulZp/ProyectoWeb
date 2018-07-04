@@ -22,14 +22,14 @@
                 <form action="registro.php" method="post" onsubmit="return validar()">
                     <hr>
                     <div class="accounttype">
-                        <input type="radio" value="administrador" id="tipoCuenta" name="tipoCuenta" checked/>
+                        <input type="radio" value="administrador" id="radioAdm" name="tipoCuenta" checked/>
                         <label for="radioAdm" class="radio" chec>Profesor</label>
-                        <input type="radio" value="usuario" id="tipoCuenta" name="tipoCuenta" />
-                        <label for="radioUser" class="radio">Alumno</label>
+                        <input type="radio" value="usuario" id="radioUser" name="tipoCuenta" />
+                        <label for="radioUser" class="radio">ALumno</label>
                     </div>
                     <hr>
                     <label id="icon" for="matricula"></label>
-                    <input type="text" name="matricula" id="matricula" placeholder="Matricula" required/>
+                    <input type="text" name="matricula" id="matricula" placeholder="Matricula ó NRC" required/>
                     <label id="icon" for="nombre"></label>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
                     <label id="icon" for="apellidos"></label>

@@ -1,0 +1,73 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+html body{
+	height: 100%;
+	width: 100%;
+	background-image: url("../img/test.jpg");
+	background-size: cover;
+	color: white;
+}
+
+.titulo{
+	display: block;
+	margin: auto auto;
+	padding: 5px;
+	width: auto;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	border: 0px solid;
+	background: #252726;
+}
+
+.titulo h1{
+	color: #FFC300;
+	font-size: 40px;
+}
+
+.prueba{
+	display:block;
+	margin: auto;	
+	padding: 10px;
+	width: 30%;
+	background: rgba(0,0,0,0.9);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+.prueba h2{
+	font-family: 'Khand', sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+
+
+
+.prueba label{
+	font-family: 'Khand', sans-serif;
+	color: #FFC300;
+	font-size: 15px;
+}
+
+.prueba #enviar{
+	width: 200px;
+	height: 50px;
+	background: #F4D03F;
+	border: 0px solid;
+	font-family: 'Khand', sans-serif;
+	color: white;
+	font-size: 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	position: relative;
+	top: 80px;
+	left: 0px;
+}
+
+.prueba #enviar:hover{
+	background: #138D75;
+}

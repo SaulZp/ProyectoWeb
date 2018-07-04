@@ -1,8 +1,8 @@
 <?php 
-/*	session_start();
+	session_start();
 	if(!isset($_SESSION['matricula'])){
-		header("Location:index.html")
-	}*/
+		header("Location:index.html");
+	}
  ?>
  
  <!DOCTYPE html>
@@ -29,6 +29,7 @@
 		<div class="prueba">
 			<form action="calificacion.php" method="post">
 			<?php 
+					error_reporting(0);
 					$conexion = mysqli_connect("localhost","root","");
 					mysqli_select_db($conexion,"proyecto");
 					$numeros=array();
@@ -64,6 +65,9 @@
 						}
 					}
 
+					session_start();
+					$_SESSION['tema'] = $idTema;
+					$_SESSION['preguntas'] = $numeros;
 					for($x=0;$x<5;$x++){
 //						echo '<h2>'.$numeros[$x].'</h2><br>';
 						//echo "SELECT * FROM preguntas WHERE id_tema='$idTema' AND noPregunta='$numeros[$x]'"."<br>";

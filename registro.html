@@ -5,6 +5,7 @@
         <title>Registrate</title>
         <meta name="description" content="">
         <link rel="stylesheet" href="css/estilosRegis.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <script src="js/validarFormulario.js"></script>
     </head>
         <body>
@@ -29,22 +30,35 @@
                     </div>
                     <hr>
                     
-                    <input type="text" name="matricula" id="matricula" placeholder="Matricula" required autocomplete="off" />
+                    <div class="mat">
+                        <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                        <input type="text" name="matricula" id="matricula" placeholder="Matricula" required autocomplete="off" />
+                    </div>
                     
+                    <div class="nom">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required autocomplete="off"/>
+                    </div>
                     
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required autocomplete="off"/>
+                    <div class="ap">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required autocomplete="off"/>
+                    </div>
                     
+                    <div class="em">
+                        <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                        <input type="email" name="email" id="email" placeholder="E-mail" required autocomplete="off"/>
+                    </div>
                     
-                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required autocomplete="off"/>
+                    <div class="pas">
+                        <i class="fa fa-key fa-2x" aria-hidden="true"></i>
+                        <input type="password" name="pass" id="pass" placeholder="Contraseña" required autocomplete="off"/>
+                    </div>
                     
-                    
-                    <input type="email" name="email" id="email" placeholder="E-mail" required autocomplete="off"/>
-                    
-                    
-                    <input type="password" name="pass" id="pass" placeholder="Contraseña" required autocomplete="off"/>
-                    
-                    
-                    <input type="password" name="pass2" id="pass2" placeholder="Confirmar Contraseña" required autocomplete="off"/>
+                    <div class="pas1">
+                        <i class="fa fa-key fa-2x" aria-hidden="true"></i>                       
+                        <input type="password" name="pass2" id="pass2" placeholder="Confirmar Contraseña" required autocomplete="off"/>
+                    </div>
                     
                     <div class="boton">
                         <br>

@@ -61,7 +61,7 @@ html{
     box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
     border: solid 1px #252726;
     position: relative;
-    top: 50px;
+    top: 1px;
 }
 
 input[type=radio]{
@@ -164,13 +164,89 @@ input[type=text],input[type=password],input[type=email]{
     cursor: pointer;
 }
 
+.registro .mat{
+    display: inline-block;
+    vertical-align: top;
+}
 
+.registro .mat i{
+    position: relative;
+    top: 5px;
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
 
+.registro .nom{
+    display: inline-block;
+    vertical-align: top;
+}
 
+.registro .nom i{
+    position: relative;
+    top: 5px;
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
 
+.registro .ap{
+    display: inline-block;
+    vertical-align: top;
+}
 
+.registro .ap i{
+    position: relative;
+    top: 5px;
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
 
+.registro .em{
+    display: inline-block;
+    vertical-align: top;
+}
 
+.registro .em i{
+    position: relative;
+    top: 5px;
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.registro .pas{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.registro .pas i{
+    position: relative;
+    top: 5px;
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.registro .pas1{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.registro .pas1 i{
+    position: relative;
+    top: 5px;
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
 
 
 

@@ -5,6 +5,7 @@
         <title>Iniciar Sesion</title>
         <meta name="description" content="">
         <link rel="stylesheet" href="css/registroLogin.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
         <body>
             
@@ -19,10 +20,15 @@
                 <h1>Inicio de Sesion</h1>
 
                 <form action="login.php" method="post">
-                    <label id="icon" for="matricula"></label>
-                    <input type="text" name="matricula" id="matricula" placeholder="Matricula" required autocomplete="off" />
-                    <label id="icon" for="pass"></label>
-                    <input type="password" name="pass" id="pass" placeholder="Contraseña" required autocomplete="off" />
+                    <div class="user">
+                    	<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                    	<input type="text" name="matricula" id="matricula" placeholder="Matricula" required autocomplete="off" />
+                    </div>
+                    
+                    <div class="contrasena">
+                    	<i class="fa fa-key fa-2x" aria-hidden="true"></i>
+                    	<input type="password" name="pass" id="pass" placeholder="Contraseña" required autocomplete="off" />
+                    </div>
                     
                     
                     <div class="boton">

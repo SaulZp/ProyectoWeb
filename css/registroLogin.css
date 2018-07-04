@@ -166,3 +166,29 @@ input[type=password]{
 	border-radius: 8px;
     cursor: pointer;
 }
+
+.login .user{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.login .user i{
+    position: relative;
+    top: 5px;    
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+}
+
+.login .contrasena{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.login .contrasena i{
+    position: relative;
+    top: 5px;
+    background: #2980B9;
+    padding: 4px;
+    color: #fff;
+}

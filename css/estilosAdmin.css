@@ -16,7 +16,8 @@ html body{
 	text-align: center;
 	font-family: 'Orbitron', sans-serif;
 	border: 1px solid;
-	background: #252726;
+    background: #252726;
+    position: static;
 }
 
 .titulo h1{
@@ -74,9 +75,12 @@ nav ul li:hover{
 .pregunta{
 	display: block;
 	margin: 0px;
+    padding-top: 40px;
 	background-image: url(../img/updatePreguntas.jpg);
 	background-size: cover;
-	height: 586px;
+	height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .respuesta{
 	display: block;
@@ -106,6 +110,11 @@ nav ul li:hover{
 	color: white;
     text-align: center;
 }
+#titulo2{
+    font-family: 'Khand', sans-serif;  
+    font-size: 30px;
+    color: aliceblue;
+}
 table {
     font-family: 'Khand', sans-serif;
     border-collapse: collapse;
@@ -129,4 +138,35 @@ tr:nth-child(even) {
     padding: 10rem;
     /* IMPORTANTE */
     text-align: center;
+}
+
+#lpregunta{
+    font-family: 'Khand', sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.contenedorPregunta{
+    margin: 0;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    height: auto;
+}
+
+#pregunta, #nPregunta, #submit{
+    padding: 3px;
+    border-radius: 6px;
+    font-family: 'Khand', sans-serif;
+    font-size: 20px;
+}
+
+#submit{
+    margin: 3px;
+    background-color: #252726;
+    color: #FFC300;
+    border-color: #252726;
+}
+#pregunta, #nPregunta{
+    width: 300px;
 }

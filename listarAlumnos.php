@@ -65,8 +65,8 @@
                         echo "<tr>";
                         echo "<td> $fila[id_Alumno] </td>";
                         echo "<td> $fila[matricula] </td>";
-                        echo "<td> $fila[nombre] </td>";
-                        echo "<td> $fila[apellidos] </td>";
+                        echo utf8_encode("<td> $fila[nombre] </td>");
+                        echo utf8_encode("<td> $fila[apellidos] </td>");
                         echo "<td> $fila[password] </td>";
                         echo "<td> $fila[correo] </td>";
                         echo "</tr>";

@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+	if(!isset($_SESSION['matricula'])){
+		header("Location:index.html");
+	}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -8,13 +16,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
 	</head>
 	<body>
-		<!--ENCABEZADO-->
-		<div class="titulo">
-			<header>
-				<h1>Generador de Examenes en Linea</h1>
-			</header>
-		</div>
-
 		<!--MENU-->
 		<div class="menu">
 			<nav>
@@ -32,7 +33,7 @@
 						<a href="listarAlumnos.php"><h2>Listar Alumnos</h2></a>
 					</li>
 					<li>
-						<a href="index.html"><h2>Cerrar Sesion</h2></a>
+						<a href="cerrar.php"><h2>Cerrar Sesion</h2></a>
 					</li>
 				</ul>
 			</nav>

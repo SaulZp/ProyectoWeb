@@ -124,7 +124,7 @@ hr{
 input[type=text],input[type=password],input[type=email]{
     width: 200px; 
     height: 39px; 
-    border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+    border-radius: 4px 4px 4px 4px/5px 5px 4px 4px; 
     background-color: #fff;  
     border: solid 1px #cbc9c9;
     margin-left: -5px;

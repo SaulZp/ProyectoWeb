@@ -68,7 +68,8 @@ nav ul li:hover{
 	margin: 0px;
 	background-image: url(../img/login.jpg);
 	background-size: cover;
-	height: 586px;
+	background-repeat: repeat;
+	height: 480px;
 }
 
 .presentacion h1{

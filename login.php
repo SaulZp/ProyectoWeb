@@ -67,6 +67,7 @@
 				$_SESSION['matricula']=$array['nrc'];
 				echo '<script type="text/javascript">
 				alert("Bienvenido Profesor '.$array['nombre'].'");
+				window.location="menuAdministrador.php";
 				</script>';
 			}else{
 				echo "<script type='text/javascript'>

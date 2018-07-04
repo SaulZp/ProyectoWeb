@@ -17,13 +17,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
 	</head>
 	<body>
-		<!--ENCABEZADO-->
-		<div class="titulo">
-			<header>
-				<h1>CALIFICACION</h1>
-			</header>
-		</div>
-
 		<!--EXAMEN GENERADO-->
 
 		<div class="prueba">

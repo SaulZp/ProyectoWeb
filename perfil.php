@@ -16,12 +16,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
 	</head>
 	<body>
-		<!--ENCABEZADO-->
-		<div class="titulo">
-			<header>
-				<h1>Generador de Examenes en Linea</h1>
-			</header>
-		</div>
+		
 
 		<!--MENU-->
 		<div class="menu">
@@ -78,7 +73,7 @@
                 
 	                $result2=mysqli_query($link,"select * from perfil where id_Alumno='$mat'");
                     
-                    echo "<table>";
+                    echo "<br><table>";
                     echo "<tr>";
                     echo "<th> ID Alumno </th>";
                     echo "<th> ID Tema </th>";
@@ -98,7 +93,15 @@
                         $intentos=$row2["intentos"];
                         echo "<tr>";
                         echo "<td> $idAlumno </td>";
-                        echo "<td> $idTema </td>";
+                        if($idTema == 1){
+                        	echo "<td> HTML5,CSS3,JAVASCRIPT </td>";
+                        }
+                        if($idTema == 2){
+                        	echo "<td> UWE </td>";
+                        }
+                        if($idTema == 3){
+                        	echo "<td> SERVLET </td>";
+                        }
                         echo "<td> $noCorrectas </td>";
                         echo "<td> $noIncorrectas </td>";
                         echo "<td> $estado </td>";

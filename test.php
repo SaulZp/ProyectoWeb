@@ -17,14 +17,12 @@
 		<link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
 	</head>
 	<body>
-		<!--ENCABEZADO-->
+		<!--EXAMEN GENERADO-->
 		<div class="titulo">
 			<header>
 				<h1>EXAMEN</h1>
 			</header>
 		</div>
-
-		<!--EXAMEN GENERADO-->
 
 		<div class="prueba">
 			<form action="calificacion.php" method="post">

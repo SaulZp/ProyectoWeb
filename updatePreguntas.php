@@ -51,10 +51,10 @@
 			    <form action="upPregunta.php" class="form_pregunta" method="post">
 			        
 			        <label for="pregunta" id="lpregunta">Tema</label>
-			        <input type="text" id="t" name="t" placeholder="Escriba la pregunta a editar"/>
+			        <input type="text" id="tema" name="tema" placeholder="Tema de la Pregunta"/>
 
 			        <label for="pregunta" id="lpregunta">#Pregunta</label>
-			        <input type="text" id="noPregunta" name="noPregunta" placeholder="Escriba la pregunta a editar"/>
+			        <input type="text" id="noPregunta" name="noPregunta" placeholder="Numero de pregunta"/>
 			        
 			        <label for="nPregunta" id="lpregunta">Nueva Pregunta</label>
 			        <input type="text" id="nPregunta" name="nPregunta" placeholder="Escriba la nueva pregunta"/>

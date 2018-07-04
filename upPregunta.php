@@ -15,7 +15,7 @@
      <body>
          <?php
             //obtiene los valores del formulario generales
-            $tema = $_POST['t'];
+            $tema = $_POST['tema'];
             $noPregunta = $_POST['noPregunta'];
             $nPregunta = $_POST['nPregunta'];
             $host = "localhost";

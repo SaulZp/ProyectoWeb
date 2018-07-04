@@ -1,51 +1,63 @@
-<?php 
-	session_start();
-	$matricula = $_POST['matricula'];
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
-    $email = $_POST['email'];
-	$contrasena = $_POST['pass'];
-    $contrasena2 = $_POST['pass2'];
-	
-    //CONEXION A LA BASE DE DATOS
-	$link = mysqli_connect("localhost","root","");
-	mysqli_select_db($link,"proyecto");
-	$consultaAlumno = mysqli_query($link,"SELECT * FROM alumnos WHERE matricula='$matricula'");
-	$consultaAdministrador=mysqli_query($link,"SELECT * FROM administradores WHERE nrc='$matricula'");
-	if($row=mysqli_fetch_array($consultaAlumno)){
-		if($row['password']==$contrasena){
-			$_SESSION['matricula']=$row['matricula'];
-			echo '<script type="text/javascript">
-			alert("Bienvenido");
-			</script>';
-		}else{
-			echo "<script type='text/javascript'>
-			alert('Contraseña incorrecta');
-			window.location='login.html'
-			</script>";
-		}
-		
-	}else{
-		if($array=mysqli_fetch_array($consultaAdministrador)){
-			if($array['password']==$contrasena){
-				$_SESSION['matricula']=$array['nrc'];
-				echo '<script type="text/javascript">
-				alert("Bienvenido Profesor '.$array['nombre'].'");
-				</script>';
-			}else{
-				echo "<script type='text/javascript'>
-				alert('Esta matricula no tiene privilegios de administrador o la contraseña no es correcta');
-				window.location='login.html'
-				</script>";
-			}	
-		}
-	/*	echo "<script type='text/javascript'>
-			var opcion = confirm('No te has registrado,¿Quieres crear una nueva cuenta como alumno?');
-			if(opcion==true){
-				window.location='registro.html';
-			}else{
-				window.location='login.html'
-			}			
-			</script>";*/
-	}
- ?>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Registrate</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/estilosRegis.css">
+        <script src="js/validarFormulario.js"></script>
+    </head>
+        <body>
+            
+            <!--CAJA DE TITULO-->
+            <div class="titulo">
+                <header>
+                    <h1>Generador de Examenes en Linea</h1>
+                </header>
+            </div>
+
+            <div class="registro">
+                <h1>Registro de Usuario</h1>
+                <!--FORMULARIO DE REGISTRO-->
+                <form action="registro.php" method="post" onsubmit="return validar()">
+                    <hr>
+                    <div class="accounttype">
+                        <input type="radio" value="administrador" id="tipoCuenta" name="tipoCuenta" checked/>
+                        <label for="radioAdm" class="radio" chec>Profesor</label>
+                        <input type="radio" value="usuario" id="tipoCuenta" name="tipoCuenta" />
+                        <label for="radioUser" class="radio">Alumno</label>
+                    </div>
+                    <hr>
+                    <label id="icon" for="matricula"></label>
+                    <input type="text" name="matricula" id="matricula" placeholder="Matricula" required/>
+                    <label id="icon" for="nombre"></label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
+                    <label id="icon" for="apellidos"></label>
+                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required/>
+                    <label id="icon" for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required/>
+                    <label id="icon" for="pass"></label>
+                    <input type="password" name="pass" id="pass" placeholder="Contraseña" required/>
+                    <label id="icon" for="pass2"></label>
+                    <input type="password" name="pass2" id="pass2" placeholder="Confirmar Contraseña" required/>
+                    
+                    <div class="boton">
+                        <br>
+                        <input type="submit" id="registrar" name="registrar" value="Registrarse">
+                    </div>
+                    <br>
+              </form>
+        </div>
+    </body>
+</html>
+
+
+<?php
+//AQUI COMIENZA EL CODIGO PHP AGREGAR UN USUARIO O CLIENTE
+$conexion = mysqli_connect("localhost","root","");
+	mysqli_select_db($conexion,"proyecto");
+/*    echo 'Error al conectar a la base de datos';
+}else{
+    echo 'Conectado a la base de datos';
+}*/
+?>

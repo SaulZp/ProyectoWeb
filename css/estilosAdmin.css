@@ -68,9 +68,13 @@ nav ul li:hover{
 .tema{
 	display: block;
 	margin: 0px;
+     padding-top: 40px;
 	background-image: url(../img/updateTemas.jpg);
 	background-size: cover;
-	height: 586px;
+	height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 }
 .pregunta{
 	display: block;
@@ -153,6 +157,14 @@ tr:nth-child(even) {
     background-color: rgb(0, 0, 0, 0.4);
     height: auto;
 }
+.contenedorTema{
+    margin: 0;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    height: 460px;
+}
+
 #noPregunta, #nPregunta, #submit, #tema{
     padding: 3px;
     border-radius: 6px;

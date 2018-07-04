@@ -95,11 +95,11 @@ nav ul li:hover{
 #texto{
 	border: 1px solid white;
 	width: 400px;
-	padding: 20px;
+	padding: 14px;
 	margin: 10px;
 	position: absolute;
 	top: 120px;
-	left: 30%;
+	left: 35%;
 	background: rgb(0,0,0,0.4);
 	font-family: 'Khand', sans-serif;
 	font-size: 20px;

@@ -5,6 +5,7 @@
         <title>Registrate</title>
         <meta name="description" content="">
         <link rel="stylesheet" href="css/estilosRegis.css">
+        <script src="js/validarFormulario.js"></script>
     </head>
         <body>
             
@@ -18,7 +19,7 @@
             <div class="registro">
                 <h1>Registro de Usuario</h1>
                 <!--FORMULARIO DE REGISTRO-->
-                <form action="registro.php" method="post">
+                <form action="registro.php" method="post" onsubmit="return validar()">
                     <hr>
                     <label id="icon" for="matricula"></label>
                     <input type="text" name="matricula" id="matricula" placeholder="Matricula" required/>

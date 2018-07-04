@@ -1,3 +1,9 @@
+<?php 
+	/*session_start();
+	if(!isset($_SESSION['matricula'])){
+		header("Location:index.html");
+	}*/
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -42,7 +48,7 @@
 		<div class="pregunta">
 			<div class="contenedorPregunta">
                 <p id="titulo2">Listado de Todas las Preguntas</p>
-			    <form action="updatePreguntas.php" class="form_pregunta">
+			    <form action="upPregunta.php" class="form_pregunta" method="post">
 			        <label for="pregunta" id="lpregunta">Pregunta</label>
 			        <input type="text" id="pregunta" name="pregunta" placeholder="Escriba la pregunta a editar"/>
 			        <label for="nPregunta" id="lpregunta">Nueva Pregunta</label>
@@ -73,15 +79,53 @@
                     echo "<th> Solución </th>";
                     echo "</tr>";
                     while($fila = mysqli_fetch_array($consultaAlumno)){
+                        
+                        $pregunta = $fila['pregunta'];
+				        $respuesta1 = $fila['respuesta1'];
+				        $respuesta2 = $fila['respuesta2'];
+						$respuesta3 = $fila['respuesta3'];
+						$respuesta4 = $fila['respuesta4'];
+							
+						$tema = $fila['id_Tema'];
+						$numP = $fila['noPregunta'];
+                        $solu = $fila['solucion'];
+
+						//RANGO, NUMERO DE PREGUNTAS CUYA RESPUESTA SON ETIQUETAS HTML, SE HACE LA CONVERSION DE HTML A TEXTO PLANO
+						//SI EL NUMERO DE PREGUNTA NO ES 3,5,7 NO HACE CONVERSION Y SOLO CODIFICA PARA QUE NO SALGAN COSAS RARAS
+						if($tema=='1'){
+				            if(($numP=='3')or($numP=='5')or($numP=='7')){
+								$respuesta1 = htmlentities($respuesta1);
+								$respuesta2 = htmlentities($respuesta2);
+								$respuesta3 = htmlentities($respuesta3);
+								$respuesta4 = htmlentities($respuesta4);
+				            }	
+				        }
+
+				        if($tema=='2'){
+				            if(($numP=='3')or($numP=='4')or($numP=='7')){
+								$respuesta1 = htmlentities($respuesta1);
+								$respuesta2 = htmlentities($respuesta2);
+								$respuesta3 = htmlentities($respuesta3);
+								$respuesta4 = htmlentities($respuesta4);
+				            }	
+				        }
+							
+				        $pregunta= utf8_encode($pregunta);
+						$respuesta1= utf8_encode($respuesta1);
+						$respuesta2= utf8_encode($respuesta2);
+						$respuesta3= utf8_encode($respuesta3);
+						$respuesta4= utf8_encode($respuesta4);
+                        
+                        
                         echo "<tr>";
-                        echo "<td> $fila[id_Tema] </td>";
-                        echo "<td> $fila[noPregunta] </td>";
-                        echo utf8_encode("<td> $fila[pregunta] </td>");
-                        echo utf8_encode("<td> $fila[respuesta1] </td>");
-                        echo utf8_encode("<td> $fila[respuesta2] </td>");
-                        echo utf8_encode("<td> $fila[respuesta3] </td>");
-                        echo utf8_encode("<td> $fila[respuesta4] </td>");
-                        echo "<td> $fila[solucion] </td>";
+                        echo "<td> $tema </td>";
+                        echo "<td> $numP </td>";
+                        echo "<td> $pregunta </td>";
+                        echo "<td> $respuesta1 </td>";
+                        echo "<td> $respuesta2 </td>";
+                        echo "<td> $respuesta3 </td>";
+                        echo "<td> $respuesta4 </td>";
+                        echo "<td> $solu </td>";
                         echo "</tr>";
                     }
                     echo "</table>";

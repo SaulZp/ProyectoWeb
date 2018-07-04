@@ -1,3 +1,9 @@
+<?php 
+	/*session_start();
+	if(!isset($_SESSION['matricula'])){
+		header("Location:index.html");
+	}*/
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>

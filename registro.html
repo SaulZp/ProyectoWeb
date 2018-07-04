@@ -19,7 +19,14 @@
             <div class="registro">
                 <h1>Registro de Usuario</h1>
                 <!--FORMULARIO DE REGISTRO-->
-                <form action="registro.php" method="post" onsubmit="return validar()">
+                <form action="registrar.php" method="post" onsubmit="return validar()">
+                    <hr>
+                    <div class="accounttype">
+                        <input type="radio" value="administrador" id="radioAdm" name="tipoCuenta" checked/>
+                        <label for="radioAdm" class="radio" chec>Profesor</label>
+                        <input type="radio" value="usuario" id="radioUser" name="tipoCuenta" />
+                        <label for="radioUser" class="radio">Alumno</label>
+                    </div>
                     <hr>
                     <label id="icon" for="matricula"></label>
                     <input type="text" name="matricula" id="matricula" placeholder="Matricula" required/>

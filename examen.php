@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Sistema</title>
+		<title>Evaluacion</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/examen.css">
 		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -43,7 +43,7 @@
 		<!--Perfil-->	
 		<div class="presentacion">
 			<h1>¿De que tema quieres hacer el examen?</h1>
-			<form action="test.php">
+			<form action="test.php" method="post">
 				<input type="submit" name="web" id="web" value="HTML,CSS,JAVASCRIPT">
 				<input type="submit" name="uwe" id="uwe" value="UWE">
 				<input type="submit" name="servlet" id="servlet" value="SERVLETS">

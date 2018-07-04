@@ -39,13 +39,12 @@
             }*/
 
             
-            $sql = "UPDATE preguntas SET respuesta1='$respuesta1', respuesta2='$respuesta2' respuesta3='$respuesta3' respuesta4='$respuesta4' solucion='$solucion' WHERE id_Tema='$tema' AND noPregunta='$noPregunta'";
-         
+            $sql = "UPDATE preguntas SET respuesta1='$respuesta1',respuesta1='$respuesta1',respuesta2='$respuesta2',respuesta3='$respuesta3',respuesta4='$respuesta4',solucion='$solucion' WHERE id_Tema='$tema' AND noPregunta='$noPregunta'";
             //Script para validar la actualizacion
             if (mysqli_query($link,$sql)) {
                 echo '<script>alert("Informacion agregada correctamente");</script>';
                 $link->close();
-                echo '<script>window.location="updateRespuestas.php";</script>';
+                echo '<script>window.location="updatePreguntas.php";</script>';
             }
          ?>
      </body>

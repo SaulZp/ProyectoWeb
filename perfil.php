@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+	if(!isset($_SESSION['matricula'])){
+		header("Location:index.html");
+	}
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -26,7 +34,7 @@
 						<a href="examen.php"><h2>Generar Examen</h2></a>
 					</li>
 					<li>
-						<a href="index.html"><h2>Cerrar Sesion</h2></a>
+						<a href="cerrar.php"><h2>Cerrar Sesion</h2></a>
 					</li>
 				</ul>
 			</nav>

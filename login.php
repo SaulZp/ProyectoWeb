@@ -30,11 +30,9 @@
                     </div>
                     <br>
               </form>
-        </div>
-    
+        </div>   
     </body>
 </html>
-
 
 
 <?php 
@@ -53,11 +51,12 @@
 			$_SESSION['matricula']=$row['matricula'];
 			echo '<script type="text/javascript">
 			alert("Bienvenido");
+			window.location="menu.php";
 			</script>';
 		}else{
 			echo "<script type='text/javascript'>
 			alert('Contraseña incorrecta');
-			window.location='login.html'
+			window.location='login.php'
 			</script>";
 		}
 		
@@ -71,9 +70,12 @@
 			}else{
 				echo "<script type='text/javascript'>
 				alert('Esta matricula no tiene privilegios de administrador o la contraseña no es correcta');
-				window.location='login.html'
+				window.location='login.php'
 				</script>";
 			}	
 		}
 	}
  ?>
+
+
+

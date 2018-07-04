@@ -40,6 +40,9 @@
 			</nav>
 		</div>
 
+		<div class="usuario">
+			<img src="img/estudiante.jpg" alt="estudiante.jpg" width="300" height="300">
+		</div>
 		<!--Perfil-->	
 		<div class="presentacion">
 			

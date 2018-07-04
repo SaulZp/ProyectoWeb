@@ -8,6 +8,7 @@ html body{
 	width: 100%;
 }
 
+
 .titulo{
 	display: block;
 	margin: auto auto;
@@ -63,6 +64,7 @@ nav ul li:hover{
 	background: #3ead47;
 }
 
+
 .presentacion{
 	display: block;
 	margin: 0px;
@@ -83,4 +85,10 @@ nav ul li:hover{
 	font-family: 'Khand', sans-serif;
 	font-size: 20px;
 	color: white;
+}
+
+.usuario{
+	display: block;
+	width: 500px;
+	height: 400px;
 }

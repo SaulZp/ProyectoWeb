@@ -40,12 +40,38 @@
 			</nav>
 		</div>
 
-		<div class="usuario">
-			<img src="img/estudiante.jpg" alt="estudiante.jpg" width="300" height="300">
-		</div>
+		
 		<!--Perfil-->	
 		<div class="presentacion">
-			
+			<div class="usuario">
+			    <img src="img/estudiante.jpg" alt="estudiante.jpg" width="300" height="300">
+		    </div>
+		    <div class="tabla">
+		        <p id="textotabla">Tabla de Perfil</p>
+		        <?php                        
+					$mat=$_SESSION['matricula'];
+						
+					$link=mysqli_connect("localhost","root","");
+					mysqli_select_db($link,"proyecto");
+                
+					$result1=mysqli_query($link,"select nombre,apellidos,correo from alumnos where matricula='$mat'");
+					$row1=mysqli_fetch_array($result1);
+
+					$matricula=$row1["nombre"];
+					$apellidos=$row1["apellidos"];
+                    $correo=$row1["correo"];
+					
+                    echo "<p> $matricula </p>";
+                
+	                $result2=mysqli_query($link,"select * from perfil where id_Alumno='$mat'");
+                    $row2=mysqli_fetch_array($result2);
+                    
+                    $id_Alumno=$row2["id_Alumno"];
+                    
+                     echo "<p> $id_Alumno </p>";
+                    
+                ?>
+		    </div>
 		</div>
 
 	</body>

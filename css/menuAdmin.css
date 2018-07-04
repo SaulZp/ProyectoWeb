@@ -64,10 +64,10 @@ nav ul li:hover{
 	background: #ECC543;
 }
 
-.presentacion{
+.graficos{
 	display: block;
 	margin: 0px;
-	background-image: url(../img/menu.jpg);
+	background-image: url(../img/menuAdmin.jpg);
 	background-size: cover;
 	height: 586px;
 }
@@ -82,6 +82,7 @@ nav ul li:hover{
 	left: 380px;
 	background: rgb(0,0,0,0.4);
 	font-family: 'Khand', sans-serif;
-	font-size: 20px;
+	font-size: 50px;
 	color: white;
+    text-align: center;
 }

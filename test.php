@@ -90,6 +90,15 @@
 									$respuesta4 = htmlentities($respuesta4);
 								}	
 							}
+
+							if($tema=='2'){
+								if(($numP=='3')or($numP=='4')or($numP=='7')){
+									$respuesta1 = htmlentities($respuesta1);
+									$respuesta2 = htmlentities($respuesta2);
+									$respuesta3 = htmlentities($respuesta3);
+									$respuesta4 = htmlentities($respuesta4);
+								}	
+							}
 							
 							 $pregunta= utf8_encode($pregunta);
 							 $respuesta1= utf8_encode($respuesta1);
@@ -100,13 +109,13 @@
 						}
 						echo "<hr>";
 						echo "<h2>".$pregunta."</h2>";
-						echo "<input type='radio' name='$x' id='$x+1' value='1'><label>".$respuesta1."</label>";
+						echo "<input type='radio' name='$x' id='$x' value='1'><label>".$respuesta1."</label>";
 						echo "<br>";
-						echo "<input type='radio' name='$x' id='$x+1' value='2'><label>".$respuesta2."</label>";
+						echo "<input type='radio' name='$x' id='$x' value='2'><label>".$respuesta2."</label>";
 						echo "<br>";
-						echo "<input type='radio' name='$x' id='$x+1' value='3'><label>".$respuesta3."</label>";
+						echo "<input type='radio' name='$x' id='$x' value='3'><label>".$respuesta3."</label>";
 						echo "<br>";
-						echo "<input type='radio' name='$x' id='$x+1' value='4'><label>".$respuesta4."</label>";
+						echo "<input type='radio' name='$x' id='$x' value='4'><label>".$respuesta4."</label>";
 						echo "<br>";
 					}
 				 ?>

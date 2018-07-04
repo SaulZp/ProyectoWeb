@@ -66,11 +66,13 @@ nav ul li:hover{
 
 
 .presentacion{
-	display: block;
+	display: flex;
 	margin: 0px;
+    padding-top: 160px;
+    padding-left: 120px;
 	background-image: url(../img/perfil.jpg);
 	background-size: cover;
-	height: 586px;
+	height: 435px;
 }
 
 #texto{
@@ -89,6 +91,18 @@ nav ul li:hover{
 
 .usuario{
 	display: block;
-	width: 500px;
+	width: 33%;
 	height: 400px;
+}
+
+#textotabla{
+    font-family: 'Khand', sans-serif;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.tabla{
+    width: 66%;
+	height: 400px;
+    text-align: center;
 }

@@ -59,6 +59,7 @@ html body{
 	position: absolute;
 	top: 230px;
 	left: 1000px;
+	cursor: pointer;
 }
 
 .acceso #registro{
@@ -73,4 +74,5 @@ html body{
 	position: absolute;
 	top: 230px;
 	left: 1200px;
+	cursor: pointer;
 }
